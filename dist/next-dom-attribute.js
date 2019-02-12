@@ -4,15 +4,31 @@
 
   var NxDomAttribute = nx.declare('nx.DomAttribute', {
     statics: {
-      set: function(inElement, inKey, inValue) {
+      set: function(inElement, inProp, inValue) {
         if (inValue == null) {
-          inElement.removeAttribute(inKey);
+          inElement.removeAttribute(inProp);
         } else {
-          inElement.setAttribute(inKey, inValue);
+          inElement.setAttribute(inProp, inValue);
         }
       },
-      get: function(inElement, inKey) {
-        return inElement.getAttribute(inKey);
+      get: function(inElement, inProp) {
+        return inElement.getAttribute(inProp);
+      },
+      sets: function(inElement, inProps) {
+        nx.forIn(
+          inProps,
+          function(key, value) {
+            this.set(inElement, key, value);
+          },
+          this
+        );
+      },
+      gets: function(inElement) {
+        var attributes = {};
+        nx.forEach(inElement.attributes, function(attr) {
+          attributes[attr.name] = attr.value;
+        });
+        return attributes;
       }
     }
   });
