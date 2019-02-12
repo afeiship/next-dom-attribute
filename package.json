@@ -1,7 +1,7 @@
 {
   "name": "next-dom-attribute",
-  "version": "0.0.1",
-  "description": "Dom attribute set/get/remove based on next",
+  "version": "1.0.0",
+  "description": "Dom attribute set/get based on next",
   "homepage": "https://github.com/afeiship/next-dom-attribute",
   "author": {
     "name": "afei",
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "gulp",
+    "test": "jest",
     "version": "gulp bump"
   },
   "main": "dist/next-dom-attribute.js",
@@ -20,11 +21,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
-    "yargs": "^4.7.1",
-    "mocha": "^3.5.0"
+    "jest": "^23.6.0",
+    "yargs": "^4.7.1"
   },
   "dependencies": {
     "next-js-core2": "github:afeiship/next-js-core2"

@@ -1,7 +1,6 @@
 {
   "name": "next-dom-attribute",
-  "version": "0.0.1",
-  "description": "Dom attribute set/get/remove based on next",
+  "description": "Dom attribute set/get based on next",
   "main": "dist/next-dom-attribute.js",
   "authors": [
     "afei"

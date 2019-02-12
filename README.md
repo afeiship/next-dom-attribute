@@ -1,8 +1,7 @@
 # next-dom-attribute
-> Dom attribute set/get/remove based on next
+> Dom attribute set/get based on next
 
-
-## resources:
-
-## todos:
-- [ ] unit test case
+## install:
+```bash
+npm install -S afeiship/next-dom-attribute --registry=https://registry.npm.taobao.org
+```
